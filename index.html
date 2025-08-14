@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Azhar Noermansyah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #0f1117;
+      --text: #e8eaed;
+      --muted: #a9b0bc;
+      --accent: #7c99ff;
+      --accent-2: #25d0a6;
+      --border: #23262f;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    :root.light {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --text: #1a1f2b;
+      --muted: #5d6470;
+      --accent: #385cff;
+      --accent-2: #10b981;
+      --border: #e8ebf2;
+      --shadow: 0 12px 30px rgba(16,24,40,.08);
+    }
+
+    /* Base */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--text); line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    
+    /* Container */
+    .container { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* Navbar */
+    .nav {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(120%) blur(8px);
+      background: color-mix(in oklab, var(--bg) 70%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .brand { display: flex; align-items: center; gap: .7rem; font-weight: 700; letter-spacing: .2px; }
+    .brand .logo { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: var(--shadow); }
+    .brand .logo svg { width: 16px; height: 16px; fill: white; }
+    .menu { display: flex; gap: 1.2rem; align-items: center; }
+    .menu a { padding: .4rem .6rem; border-radius: 10px; opacity: .9; }
+    .menu a:hover { background: color-mix(in oklab, var(--panel) 85%, transparent); opacity: 1; }
+
+    /* Toggle */
+    .toggle {
+      appearance: none; border: 1px solid var(--border); background: var(--panel); color: var(--text);
+      padding: .5rem .7rem; border-radius: 12px; display: inline-flex; align-items: center; gap: .45rem;
+      cursor: pointer; box-shadow: var(--shadow);
+    }
+    .toggle svg { width: 16px; height: 16px; }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .section-title { font-size: clamp(22px, 2.5vw, 28px); font-weight: 800; margin: 0 0 18px; letter-spacing: .2px; }
+    .section-desc { color: var(--muted); margin: 0 0 28px; }
+
+    /* Hero */
+    .hero { padding: 90px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: .5rem; padding: .3rem .6rem; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+    .hero h1 { font-size: clamp(32px, 5vw, 56px); line-height: 1.05; margin: 14px 0; letter-spacing: .4px; }
+    .typing { color: var(--accent); border-right: 2px solid var(--accent); padding-right: 6px; white-space: nowrap; }
+    .lead { font-size: clamp(16px, 1.4vw, 18px); color: var(--muted); margin-bottom: 24px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { padding: .85rem 1.1rem; border-radius: 14px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font-weight: 600; letter-spacing: .2px; box-shadow: var(--shadow); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; }
+
+    .avatar-wrap { position: relative; }
+    .avatar { width: min(360px, 80%); aspect-ratio: 1; border-radius: 24px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); margin: 0 auto; background: color-mix(in oklab, var(--panel) 85%, transparent); display: grid; place-items: center; }
+    .avatar span { color: var(--muted); font-weight: 600; }
+
+    /* Cards */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(12, 1fr); }
+    .card { grid-column: span 4; background: var(--panel); border: 1px solid var(--border); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-3px); }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* Projects */
+    .projects .item { grid-column: span 6; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); background: var(--panel); box-shadow: var(--shadow); position: relative; }
+    .projects .item figure { aspect-ratio: 16/9; background: #1b1f2a; }
+    .projects .item .meta { padding: 14px 16px 18px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .tag { padding: .25rem .55rem; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); color: var(--muted); }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 24px; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 4px; bottom: 4px; width: 2px; background: color-mix(in oklab, var(--muted) 40%, transparent); }
+    .timeline .step { position: relative; padding: 10px 12px 14px 16px; border: 1px solid var(--border); background: var(--panel); border-radius: 14px; margin-bottom: 12px; }
+    .timeline .step::before { content: ""; position: absolute; left: -10px; top: 14px; width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 3px color-mix(in oklab, var(--panel) 60%, transparent); }
+
+    /* Contact */
+    form { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field.full { grid-column: 1/-1; }
+    input, textarea { background: var(--panel); border: 1px solid var(--border); color: var(--text); border-radius: 12px; padding: .9rem 1rem; font: inherit; }
+    textarea { min-height: 140px; resize: vertical; }
+
+    /* Footer */
+    footer { padding: 36px 0 48px; color: var(--muted); border-top: 1px solid var(--border); }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .grid .card { grid-column: span 6; }
+      .projects .item { grid-column: span 12; }
+    }
+    @media (max-width: 640px) {
+      .menu { display: none; }
+      .grid .card { grid-column: span 12; }
+      form { grid-template-columns: 1fr; }
+    }
+
+    /* Scroll Reveal */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s cubic-bezier(.2,.65,.2,1), transform .6s cubic-bezier(.2,.65,.2,1); }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8.66 5v8L12 21l-8.66-5V8L12 3z" fill="currentColor"/></svg>
+        </span>
+        <span>Azhar Noermansyah</span>
+      </a>
+      <div class="menu">
+        <a href="#about">Tentang</a>
+        <a href="#projects">Proyek</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+        <button id="themeToggle" class="toggle" aria-label="Toggle tema" title="Ubah tema">
+          <svg id="iconSun" viewBox="0 0 24 24" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.84 17.24l-1.79 1.8 1.79 1.79 1.79-1.79-1.79-1.8zM20 11v2h3v-2h-3zm-2.76-6.16l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM17.24 19.16l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 7a5 5 0 100 10A5 5 0 0012 7z"/></svg>
+          <svg id="iconMoon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <span id="themeLabel">Gelap</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker">👋 Halo, Saya Azhar</span>
+        <h1>
+          <span style="opacity:.85">Azhar Noermansyah</span><br/>
+          <span class="typing" aria-live="polite" aria-atomic="true"></span>
+        </h1>
+        <p class="lead">Saya membangun website modern yang cepat, aksesibel, dan berfokus pada pengalaman pengguna. Mari berkolaborasi membuat sesuatu yang berdampak.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hubungi Saya</a>
+          <a class="btn" href="#projects">Lihat Proyek</a>
+        </div>
+      </div>
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <span>
+            <img src="assets/avatar2.jpg" alt="Foto Azhar Noermansyah">
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT / SKILLS -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Tentang Saya</h2>
+      <p class="section-desc">Saya seorang Frontend Developer yang suka menciptakan antarmuka bersih dan menyenangkan. Fokus pada HTML, CSS, JavaScript, serta performa dan aksesibilitas.</p>
+      <div class="grid">
+        <article class="card reveal">
+          <h3>Keahlian Inti</h3>
+          <p>HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6+), PHP, MySQL, Responsif, Aksesibilitas (ARIA), SEO dasar.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Alat & Library</h3>
+          <p>Git, Figma, Vite, React, Tailwind CSS, Bootstrap5, Blender3d.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Proyek Sekolah</h3>
+          <p>Website E-Learning, Aplikasi Penyewaan Perlengkapan Camping & Hiking (GearGo), Portfolio Pribadi.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Proyek Sekolah</h2>
+      <p class="section-desc">Beberapa karya terbaru dengan fokus UI/UX, performa, dan kualitas kode.</p>
+      <div class="grid">
+        <article class="item reveal">
+          <figure>
+            <img src="assets/websmk.png" alt="Website SMK" />
+          </figure>
+          <div class="meta">
+            <h3>Website SMKN 1 Subang</h3>
+            <p class="section-desc">Tugas Membuat Web SMK Negeri 1 Subang.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+          </div>
+        </article>
+        <article class="item reveal">
+          <figure>
+            <img src="assets/prototype-itemku.png" alt="Prototype Web Itemku" />
+          </figure>
+          <div class="meta">
+            <h3>Prototype Web Itemku</h3>
+            <p class="section-desc">Tugas UI/UX Web Itemku menggunakan Figma.</p>
+            <div class="tags">
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+        </article>
+                <article class="item reveal">
+          <figure>
+            <img src="assets/ProjekCamping.png" alt="Dashboard Analitik" />
+          </figure>
+          <div class="meta">
+            <h3>UI/UX Aplikasi Penyewaan Perlengkapan Camping & Hiking (GearGo)</h3>
+            <p class="section-desc">Desain antarmuka yang ramah pengguna dan responsif untuk aplikasi penyewaan perlengkapan camping. Design ini saya bangun bersama dengan satu rekan saya.</p>
+            <div class="tags">
+              <span class="tag">Figma</span>
+              <span class="tag">HTML</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Pengalaman</h2>
+      <div class="timeline">
+        <div class="step reveal">
+          <strong>SMK Semester 2 - 3</strong>
+          <div class="section-desc">Januari 2025 - Sekarang • Mempelajari backend, database seperti MySQL dan Firebase, mengembangkan skill UI/UX saya, meningkatkan performa dengan mempelajari bahasa pemrograman baru dan mengimplementassikannya menjadi projek yang lebih baik.</div>
+        </div>
+        <div class="step reveal">
+          <strong>SMK Semester 1</strong>
+          <div class="section-desc">September - Desember 2024 • Belajar dasar-dasar frontend lalu mengimplementasikannya dengan membuat projek kecil seperti portfolio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Kontak</h2>
+      <p class="section-desc">Punya proyek atau peluang kolaborasi? Kirim pesan—saya akan balas secepatnya.</p>
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Nama</label>
+          <input id="name" name="name" type="text" placeholder="Nama Anda" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="email@domain.com" required />
+        </div>
+        <div class="field full">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" placeholder="Tulis pesan Anda…" required></textarea>
+        </div>
+        <div class="field full">
+          <button class="btn primary" type="submit">Kirim</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+      <small>© <span id="year"></span> Nama Anda. Semua hak dilindungi.</small>
+      <div style="display:flex; gap:10px; align-items:center; opacity:.85">
+        <a href="https://github.com/jay-lab-tech" aria-label="GitHub">GitHub</a>
+        <span>•</span>
+        <a href="http://www.linkedin.com/in/azhar-noermansyah-5a836734a" aria-label="LinkedIn">LinkedIn</a>
+        <span>•</span>
+        <a href="mailto:acc5zhar@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // =========================
+    // Tema (Dark/Light Toggle)
+    // =========================
+    const root = document.documentElement;
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)');
+    const savedTheme = localStorage.getItem('theme');
+
+    function applyTheme(mode) {
+      if (mode === 'light') {
+        root.classList.add('light');
+        document.getElementById('iconSun').style.display = 'none';
+        document.getElementById('iconMoon').style.display = '';
+        document.getElementById('themeLabel').textContent = 'Terang';
+      } else {
+        root.classList.remove('light');
+        document.getElementById('iconSun').style.display = '';
+        document.getElementById('iconMoon').style.display = 'none';
+        document.getElementById('themeLabel').textContent = 'Gelap';
+      }
+    }
+
+    // Inisialisasi tema
+    applyTheme(savedTheme || (prefersLight.matches ? 'light' : 'dark'));
+
+    // Toggle klik
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const nowLight = !root.classList.contains('light');
+      const mode = nowLight ? 'light' : 'dark';
+      applyTheme(mode);
+      localStorage.setItem('theme', mode);
+    });
+
+    // Update jika sistem berubah
+    prefersLight.addEventListener('change', (e) => {
+      const mode = e.matches ? 'light' : 'dark';
+      if (!localStorage.getItem('theme')) applyTheme(mode);
+    });
+
+    // =========================
+    // Typing Effect (Hero)
+    // =========================
+    const roles = ['Frontend Developer', 'Backend Developer', 'UI/UX Enthusiast', 'Web Performance Advocate at Debugger'];
+    const typingEl = document.querySelector('.typing');
+    let roleIdx = 0, charIdx = 0, deleting = false;
+
+    function typeLoop() {
+      const role = roles[roleIdx % roles.length];
+      if (!deleting) {
+        typingEl.textContent = role.slice(0, ++charIdx);
+        if (charIdx === role.length) {
+          deleting = true;
+          setTimeout(typeLoop, 1200); // jeda ketika selesai mengetik
+          return;
+        }
+      } else {
+        typingEl.textContent = role.slice(0, --charIdx);
+        if (charIdx === 0) {
+          deleting = false; roleIdx++; 
+        }
+      }
+      const speed = deleting ? 45 : 80;
+      setTimeout(typeLoop, speed);
+    }
+    typeLoop();
+
+    // =========================
+    // Scroll Reveal (IntersectionObserver)
+    // =========================
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    revealEls.forEach(el => io.observe(el));
+
+    // =========================
+    // Smooth Scroll offset untuk header sticky
+    // =========================
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const id = link.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          const target = document.querySelector(id);
+          if (!target) return;
+          const headerH = document.querySelector('.nav').offsetHeight + 12;
+          const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // =========================
+    // Validasi sederhana form kontak
+    // =========================
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      // Validasi mini
+      const errors = [];
+      if (!data.name || data.name.trim().length < 2) errors.push('Nama minimal 2 karakter');
+      if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.push('Email tidak valid');
+      if (!data.message || data.message.trim().length < 10) errors.push('Pesan minimal 10 karakter');
+
+      if (errors.length) {
+        alert('Periksa isian berikut:\n- ' + errors.join('\n- '));
+        return;
+      }
+
+      // Di produksi, kirim via API/EmailJS
+      alert('Terima kasih! Pesan Anda berhasil dikirim (demo).');
+      form.reset();
+    });
+
+    // Tahun footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
