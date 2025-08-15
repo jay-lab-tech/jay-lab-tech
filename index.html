@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portofolio — Azhar Noermansyah</title>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -239,8 +241,8 @@
             <img src="assets/ProjekCamping.png" alt="Dashboard Analitik" />
           </figure>
           <div class="meta">
-            <h3>UI/UX Aplikasi Penyewaan Perlengkapan Camping & Hiking (GearGo)</h3>
-            <p class="section-desc">Desain antarmuka yang ramah pengguna dan responsif untuk aplikasi penyewaan perlengkapan camping. Design ini saya bangun bersama dengan satu rekan saya.</p>
+            <h3>Aplikasi Penyewaan Perlengkapan Camping & Hiking (GearGo)</h3>
+            <p class="section-desc">Desain antarmuka yang ramah pengguna dan responsif untuk aplikasi penyewaan perlengkapan camping. Design ini saya bangun bersama dengan rekan saya.</p>
             <div class="tags">
               <span class="tag">Figma</span>
               <span class="tag">HTML</span>
@@ -311,6 +313,13 @@
   </footer>
 
   <script>
+  // =========================
+  // Konfigurasi EmailJS
+  // =========================
+  const EMAILJS_USER_ID = 'uaODt6LFKZ4xV-Ikl';      // dari akun EmailJS kamu
+  const EMAILJS_SERVICE_ID = 'service_jo2lutr';   // dari Email Services
+  const EMAILJS_TEMPLATE_ID = 'template_7ttvj48';  // dari Email Templates (halaman ini)
+  emailjs.init(EMAILJS_USER_ID);
     // =========================
     // Tema (Dark/Light Toggle)
     // =========================
@@ -411,25 +420,34 @@
     // Validasi sederhana form kontak
     // =========================
     const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
 
-      // Validasi mini
-      const errors = [];
-      if (!data.name || data.name.trim().length < 2) errors.push('Nama minimal 2 karakter');
-      if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.push('Email tidak valid');
-      if (!data.message || data.message.trim().length < 10) errors.push('Pesan minimal 10 karakter');
+        // Validasi mini
+        const errors = [];
+        if (!data.name || data.name.trim().length < 2) errors.push('Nama minimal 2 karakter');
+        if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.push('Email tidak valid');
+        if (!data.message || data.message.trim().length < 10) errors.push('Pesan minimal 10 karakter');
 
-      if (errors.length) {
-        alert('Periksa isian berikut:\n- ' + errors.join('\n- '));
-        return;
-      }
+        if (errors.length) {
+          alert('Periksa isian berikut:\n- ' + errors.join('\n- '));
+          return;
+        }
 
-      // Di produksi, kirim via API/EmailJS
-      alert('Terima kasih! Pesan Anda berhasil dikirim (demo).');
-      form.reset();
-    });
+        // Kirim email via EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message
+        })
+        .then(function() {
+          alert('Terima kasih! Pesan Anda berhasil dikirim.');
+          form.reset();
+        }, function(error) {
+          alert('Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+        });
+      });
 
     // Tahun footer
     document.getElementById('year').textContent = new Date().getFullYear();
