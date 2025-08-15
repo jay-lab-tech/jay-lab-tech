@@ -30,8 +30,6 @@ Beberapa karya dan latihan yang sudah saya buat:
 
 - 🌐 **Personal Portfolio Website** – Menampilkan profil, skill, dan karya saya  
 - 📄 **Desain Figma** – Membuat desain website & aplikasi yang clean dan menarik  
-- 💡 **Mini Web Features** – Fitur kecil seperti To-Do List, Timer, dan Music Player  
-- 🎮 **Fun Projects** – Game sederhana untuk mengasah logika & kreatifitas
 
 > 🔗 Lihat karya lengkap saya di [Repositori GitHub](https://github.com/jay-lab-tech)
   
