@@ -100,3 +100,7 @@ Let’s connect and build something meaningful.
 - 🧠 Curious about how things work behind the scenes  
 - 🕹 Enjoy turning simple ideas into interactive products  
 - 🎥 Movie lover & lifelong learner
+
+
+
+![Azhar's GitHub stats](https://github-readme-stats.vercel.app/api?username=jay-lab-tech&show_icons=true&theme=github_dark)
