@@ -82,12 +82,6 @@ https://github.com/jay-lab-tech
 
 ---
 
-## 📊 GitHub Stats
-![Azhar's GitHub stats](https://github-readme-stats.vercel.app/api?username=jay-lab-tech&show_icons=true&theme=transparent)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=jay-lab-tech&layout=compact&theme=transparent)
-
----
-
 ## 📫 Connect With Me
 Let’s connect and build something meaningful.
 
@@ -100,7 +94,3 @@ Let’s connect and build something meaningful.
 - 🧠 Curious about how things work behind the scenes  
 - 🕹 Enjoy turning simple ideas into interactive products  
 - 🎥 Movie lover & lifelong learner
-
-
-
-![Azhar's GitHub stats](https://github-readme-stats.vercel.app/api?username=jay-lab-tech&show_icons=true&theme=github_dark)
