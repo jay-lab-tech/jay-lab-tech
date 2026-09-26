@@ -438,7 +438,6 @@ SELECT
 
 - ☕ Ngopi dulu, baru ngoding
 - 🌙 Paling produktif jam 10 malam ke atas
-- 🐧 Tim **Linux** sejati (sorry Windows)
 - 🗄️ Bisa lupa makan tapi nggak lupa `EXPLAIN ANALYZE`
 - 🚀 Deploy pakai Docker biar *"works on my machine"* nggak jadi alasan
 - 🧠 Suka baca *System Design Primer* sebelum tidur
