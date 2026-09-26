@@ -48,7 +48,7 @@ peran          : Full Stack Developer — Heavy Backend
 fokus          : Backend Architecture · Database · API · System Design
 stack_utama    : Node.js · Express · Laravel · Next.js · React · TypeScript
 database       : PostgreSQL · MySQL · Redis · Prisma
-devops         : Docker · Nginx · GitHub Actions · Linux
+devops         : Docker · Nginx · GitHub Actions
 motto          : "Design first, optimize with data, ship with confidence."
 </pre>
 
@@ -81,6 +81,10 @@ motto          : "Design first, optimize with data, ship with confidence."
 <td><b>🧰 Stack Andalan</b></td>
 <td>Node.js · Express · Laravel · Next.js · PostgreSQL · Redis · Docker</td>
 </tr>
+<tr>
+<td><b>💻 Environment</b></td>
+<td>Windows · Docker Desktop · WSL2-ready</td>
+</tr>
 </table>
 
 ---
@@ -104,12 +108,14 @@ motto          : "Design first, optimize with data, ship with confidence."
 
 ### 🚀 DevOps & Infrastructure
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,nginx,git,githubactions,linux,bash&theme=dark"/>
+  <img src="https://skillicons.dev/icons?i=docker,nginx,git,githubactions,powershell,windows&theme=dark"/>
 </p>
 
 ### 🧰 Tools Harian
 <p>
   <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Windows%20Terminal-4D4D4D?style=flat-square&logo=windows-terminal&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white"/>
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
   <img src="https://img.shields.io/badge/DBeaver-382923?style=flat-square&logo=dbeaver&logoColor=white"/>
   <img src="https://img.shields.io/badge/Insomnia-4000BF?style=flat-square&logo=insomnia&logoColor=white"/>
@@ -171,7 +177,7 @@ motto          : "Design first, optimize with data, ship with confidence."
 - Nginx Reverse Proxy
 - CI/CD dengan GitHub Actions
 - Environment Management
-- Linux Server Administration
+- Windows Development Environment
 - Git Workflow (Feature Branch, PR, Rebase)
 
 </td>
@@ -248,7 +254,7 @@ motto          : "Design first, optimize with data, ship with confidence."
 <td width="25%" align="center"><b>⚙️ Backend</b><br><br>Node.js<br>Express<br>Laravel<br>REST API</td>
 <td width="25%" align="center"><b>💾 Database</b><br><br>PostgreSQL<br>MySQL<br>Redis<br>Prisma</td>
 <td width="25%" align="center"><b>🎨 Frontend</b><br><br>Next.js<br>React<br>TypeScript<br>Tailwind</td>
-<td width="25%" align="center"><b>🚀 DevOps</b><br><br>Docker<br>Nginx<br>GitHub Actions<br>Linux</td>
+<td width="25%" align="center"><b>🚀 DevOps</b><br><br>Docker<br>Nginx<br>GitHub Actions<br>Windows</td>
 </tr>
 </table>
 
@@ -432,16 +438,17 @@ SELECT
   'postgres'          AS favorite_db,
   'redis'             AS secret_weapon,
   'docker'            AS ship_tool,
-  'dark'              AS theme;
+  'windows'           AS daily_driver;
 -- Result: 1 row (dan tidak akan pernah berubah)
 </pre>
 
 - ☕ Ngopi dulu, baru ngoding
 - 🌙 Paling produktif jam 10 malam ke atas
+- 🪟 Tim **Windows** + Docker Desktop (biar environment tetap konsisten)
+- ⚡ **PowerShell** + Windows Terminal — bukan `.bat` lagi
 - 🗄️ Bisa lupa makan tapi nggak lupa `EXPLAIN ANALYZE`
 - 🚀 Deploy pakai Docker biar *"works on my machine"* nggak jadi alasan
 - 🧠 Suka baca *System Design Primer* sebelum tidur
-- 📖 Dokumentasi > Stack Overflow (kalau sabar)
 
 ---
 
@@ -469,6 +476,12 @@ Desain API yang clean, autentikasi yang aman, dan optimasi database. Saya suka b
 <summary><b>Gimana strategi caching kamu?</b></summary>
 <br>
 <code>Redis</code> untuk data yang sering diakses tapi jarang berubah — config, session, dan hasil query berat. Saya juga pakai untuk rate limiting dan background job queue. Cache invalidation selalu dipikirkan sejak desain, bukan ditambah belakangan.
+</details>
+
+<details>
+<summary><b>Kenapa pakai Windows untuk development?</b></summary>
+<br>
+Karena <code>Docker Desktop</code> dan <code>WSL2</code> sudah bikin environment development di Windows setara dengan Linux. Production tetap jalan di Linux lewat container — jadi konsisten dari lokal sampai server.
 </details>
 
 <details>
