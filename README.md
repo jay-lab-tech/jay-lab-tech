@@ -12,31 +12,31 @@
 
 ---
 
-## 🛠️ Tech Stack
+## // tech-stack
 
-**Backend**
+**backend**
 <p>
   <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,laravel,php,ts,js&theme=dark"/>
 </p>
 
-**Database & Caching**
+**database & caching**
 <p>
   <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis,prisma&theme=dark"/>
 </p>
 
-**Frontend**
+**frontend**
 <p>
   <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind&theme=dark"/>
 </p>
 
-**DevOps & Tools**
+**devops & tools**
 <p>
   <img src="https://skillicons.dev/icons?i=docker,nginx,git,githubactions,powershell,windows&theme=dark"/>
 </p>
 
 ---
 
-## 📌 Proyek Unggulan
+## // projects
 
 | Proyek | Deskripsi | Stack |
 |--------|-----------|-------|
@@ -47,7 +47,7 @@
 
 ---
 
-## 📊 GitHub Stats
+## // stats
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=jay-lab-tech&theme=tokyonight&hide_border=true" alt="streak stats"/>
@@ -55,7 +55,7 @@
 
 ---
 
-## 🤝 Kontak
+## // contact
 
 <p align="center">
   <a href="https://linkedin.com/in/USERNAME_LINKEDIN">
