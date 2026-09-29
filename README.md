@@ -1,14 +1,13 @@
-<h1 align="center">Azhar Noermansyah</h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0969da,100:00d4aa&height=180&section=header&text=Azhar%20Noermansyah&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer%20%E2%80%94%20Heavy%20Backend&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 
 <p align="center">
-  <b>Full Stack Developer — Heavy Backend</b><br>
-  Building scalable APIs, optimized databases, and clean architectures.
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=3000&pause=1000&color=00D4AA&center=true&vCenter=true&width=600&lines=Building+scalable+APIs+%26+optimized+databases;Node.js+%7C+Express+%7C+Laravel+%7C+Next.js;PostgreSQL+%7C+MySQL+%7C+Redis+%7C+Docker;Design+first%2C+optimize+with+data%2C+ship+with+confidence." alt="typing"/>
 </p>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=jay-lab-tech&color=0969da&style=flat-square&label=views"/>
   <img src="https://img.shields.io/github/followers/jay-lab-tech?color=0969da&style=flat-square&label=followers"/>
-  <img src="https://img.shields.io/badge/status-open%20to%20collaborate-00aa55?style=flat-square"/>
+  <img src="https://img.shields.io/badge/status-open%20to%20collaborate-00d4aa?style=flat-square"/>
 </p>
 
 ---
@@ -46,8 +45,6 @@
 | [**koperasi**](https://github.com/jay-lab-tech/koperasi) | Sistem manajemen koperasi — simpan pinjam & laporan | `Laravel` `MySQL` |
 | [**nesaiFrontend**](https://github.com/jay-lab-tech/nesaiFrontend) | Frontend modern untuk sistem informasi sekolah | `Next.js` `TypeScript` `Tailwind` |
 
-> 💡 **Pin 4 repo di atas** di profil GitHub kamu biar sinkron dengan README ini.
-
 ---
 
 ## 📊 GitHub Stats
@@ -80,3 +77,5 @@
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
 </p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4aa,50:0969da,100:0d1117&height=120&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontColor=ffffff&fontAlignY=75" width="100%"/>
