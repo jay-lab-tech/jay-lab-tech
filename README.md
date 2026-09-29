@@ -50,16 +50,12 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=jay-lab-tech&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jay-lab-tech&layout=compact&theme=tokyonight&hide_border=true&langs_count=6"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jay-lab-tech&theme=tokyonight&hide_border=true" alt="streak stats"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jay-lab-tech&theme=tokyonight&hide_border=true"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jay-lab-tech&theme=tokyo-night&hide_border=true&area=true" alt="contribution graph"/>
+  <img height="160em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jay-lab-tech&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="github stats"/>
+  <img height="160em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jay-lab-tech&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="top languages"/>
 </p>
 
 ---
