@@ -12,7 +12,7 @@
 
 ---
 
-## // tech-stack
+## [ tech-stack ]
 
 **backend**
 <p>
@@ -36,7 +36,7 @@
 
 ---
 
-## // projects
+## [ projects ]
 
 | Proyek | Deskripsi | Stack |
 |--------|-----------|-------|
@@ -47,7 +47,7 @@
 
 ---
 
-## // stats
+## [ stats ]
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=jay-lab-tech&theme=tokyonight&hide_border=true" alt="streak stats"/>
@@ -55,7 +55,7 @@
 
 ---
 
-## // contact
+## [ contact ]
 
 <p align="center">
   <a href="https://linkedin.com/in/USERNAME_LINKEDIN">
